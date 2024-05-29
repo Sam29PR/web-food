@@ -1,0 +1,8 @@
+<div class="payment-container">
+    <div *ngFor="let method of paymentMethods" class="payment-method">
+      <input type="radio" [value]="method" [(ngModel)]="selectedPaymentMethod" name="paymentMethod" (click)="selectPaymentMethod(method)">
+      <label>{{ method }}</label>
+    </div>
+    <button (click)="confirmPayment()">Confirm Payment</button>
+  </div>
+  

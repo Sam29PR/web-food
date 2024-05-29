@@ -1,0 +1,20 @@
+.kitchen-container {
+    padding: 20px;
+  }
+  
+  .kitchen-container h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .kitchen-container ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .kitchen-container li {
+    padding: 10px;
+    border: 3px solid #000000;
+    margin-bottom: 5px;
+  }
+  

@@ -1,0 +1,22 @@
+<div class="tpv-container">
+  <h2>TPV Ordenes</h2>
+  <input type="text" placeholder="Search orders..." [(ngModel)]="searchQuery" (input)="filterOrders()">
+  <ul>
+    <li *ngFor="let order of filteredOrders">
+      {{ order.customer_name }} ordered {{ order.item }} (Status: {{ order.status }})
+      <button (click)="deleteOrder(order)">Delete</button>
+      <button (click)="updateOrder(order)">Update</button>
+    </li>
+  </ul>
+  
+  <h3>Agregar Nuevo Pedido</h3>
+  <form (ngSubmit)="addOrder()">
+    <label for="customer_name">Nombre del Cliente:</label>
+    <input type="text" id="customer_name" [(ngModel)]="newOrder.customer_name" name="customer_name" required>
+    
+    <label for="item">Articulo:</label>
+    <input type="text" id="item" [(ngModel)]="newOrder.item" name="item" required>
+    
+    <button type="submit">Agregar Pedido</button>
+  </form>
+</div>

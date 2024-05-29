@@ -1,0 +1,39 @@
+<div class="menu-container">
+    <h2>Menu</h2>
+    <div class="products-grid">
+      <div class="product-card" *ngFor="let product of products">
+        <img [src]="product.image" alt="{{ product.name }}" class="product-image">
+        <div class="product-info">
+          <h3>{{ product.name }}</h3>
+          <p>{{ product.ingredients }}</p>
+          <p>${{ product.price }}</p>
+          <button (click)="addToOrder(product)">Agregar Pedido</button>
+        </div>
+      </div>
+    </div>
+  
+    <h3>Tu Pedido</h3>
+    <ul>
+      <li *ngFor="let product of selectedProducts">
+        {{ product.name }} - ${{ product.price }}
+        <button (click)="removeFromOrder(product)">Eliminar</button>
+      </li>
+    </ul>
+  
+    <form (ngSubmit)="placeOrder()">
+      <label for="customer_name">Nombre del Cliente :</label>
+      <input type="text" id="customer_name" [(ngModel)]="customerName" name="customer_name" required>
+      
+      <button type="submit">Realizar Pedido</button>
+    </form>
+  </div>
+
+  <div *ngIf="orderStatus">
+    <h3>Order Status: {{ orderStatus }}</h3>
+  </div>
+
+  <div *ngIf="showPaymentMethods">
+    <h3>Select Payment Method</h3>
+    <app-payment></app-payment>
+  </div>
+  

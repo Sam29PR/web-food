@@ -1,0 +1,79 @@
+.menu-container {
+  padding: 20px;
+}
+
+.menu-container h2, .menu-container h3 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.product-card {
+  border: 1px solid #ddd;
+  padding: 15px;
+  text-align: center;
+}
+
+.product-image {
+  max-width: 100%;
+  height: auto;
+}
+
+.product-info {
+  margin-top: 10px;
+}
+
+.product-info h3 {
+  font-size: 18px;
+  margin: 10px 0;
+}
+
+.product-info p {
+  margin: 5px 0;
+}
+
+button {
+  padding: 5px 10px;
+  margin-top: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+.menu-container form {
+  margin-top: 20px;
+}
+
+.menu-container label {
+  display: block;
+  margin: 10px 0 5px;
+}
+
+.menu-container input {
+  padding: 8px;
+  width: 100%;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+}
+
+button[type="submit"] {
+  padding: 10px 15px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+button[type="submit"]:hover {
+  background-color: #218838;
+}
